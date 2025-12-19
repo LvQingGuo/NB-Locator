@@ -2,7 +2,7 @@
 ## 一、项目概述
 ### 1.1基础信息
 
-- **项目周期：**2025.8.1 - 2025.8.25
+- **项目周期**：2025.8.1 - 2025.8.25
 - **核心目标**：开发一款集成 NB-IoT 通信、GPS 定位、电池管理功能的物联网终端，实现定位数据与电池状态向 OneNET 云平台的远程上报
 - **硬件架构**：STM32L031F6Px（主控）+ BC20（NB-IoT/GNSS 模块）+ 锂电池（供电）
 - **软件环境**：STM32CubeMX + HAL 库 + KEIL MDK
@@ -32,7 +32,7 @@
 6. 低电量关机控制
 ```
 
-#### 	**2.1.2 **硬件初始化部分
+#### 	**2.1.2**硬件初始化部分
 
 ```c
 HAL_GPIO_WritePin(PWR_LED_GPIO_Port, PWR_LED_Pin, GPIO_PIN_RESET); // 点亮电源指示灯
@@ -48,7 +48,7 @@ HAL_GPIO_WritePin(GPIOA, NB_RST_Pin, GPIO_PIN_RESET);
 HAL_Delay(10000); // 等待模块启动
 ```
 
-#### 	**2.1.3 **NB-IoT 联网与定位GNSS开启与 LwM2M 协议对接
+#### 	**2.1.3**NB-IoT 联网与定位GNSS开启与 LwM2M 协议对接
 
 ```markdown
 1. AT命令测试模块正常
@@ -421,7 +421,7 @@ if (__HAL_UART_GET_FLAG(&hlpuart1, UART_FLAG_RXNE))
 
 - **供电选择电路**：支持 USB（5V）与锂电池（4.2V）双输入，通过二极管实现防反接与自动切换
 
-- **一键开关机电路：**按键按下实现开机和关机
+- **一键开关机电路**：按键按下实现开机和关机
 
 ![](D:\项目复盘合集\1-物联网NB-IoT定位器\attachments\hardware\供电选择+一键开关机电路.jpg)
 
@@ -457,7 +457,7 @@ if (__HAL_UART_GET_FLAG(&hlpuart1, UART_FLAG_RXNE))
 
 #### 3.2.3电压检测电路
 
-- **电池电压采样**：通过电阻分压网络将电池电压（3.0V~4.2V）降至 ADC 量程内（0~3.3V），接入 STM32 的 ADC 通道 4
+- **电池电压采样**：通过电阻分压网络将电池电压（3.0V—4.2V）降至 ADC 量程内（0—3.3V），接入 STM32 的 ADC 通道 4
 
 ![](D:\项目复盘合集\1-物联网NB-IoT定位器\attachments\hardware\端口电压检测电路.jpg)
 
