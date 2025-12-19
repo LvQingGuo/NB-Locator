@@ -1,6 +1,6 @@
 #  [NB-IOT定位器] 复盘笔记
-# 项目原开源链接：https://oshwhub.com/ration/wo-di-ding-wei-qi
-# 说明：本项目基于立创开源广场项目进行复刻并优化，改进点如下：
+## 项目原开源链接：https://oshwhub.com/ration/wo-di-ding-wei-qi
+## 说明：本项目基于立创开源广场项目进行复刻并优化，改进点如下：
 		1.采用TIM定时器替换阻塞延时进行1s中断查询；
 		2.更新与OneNET云平台连接方式；(截止目前最新版OneNET云平台)
 ## 一、项目概述
